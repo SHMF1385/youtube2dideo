@@ -4,8 +4,10 @@ import sys
 def CheckUrl(url):
     try:
         import requests
-
+        
+        print("Checking for possible errors ...")
         respons = requests.get(url)
+        
         if respons.ok:
             print("No errors")
             return True
@@ -31,7 +33,6 @@ if len(args) == 2 or len(args) == 3:
 
     if len(args) > 2:
         if control_args.get(args[2], False):
-            print("Checking for possible errors ...")
             control_args[args[2]](video_url)
 
 elif len(args) > 3:
