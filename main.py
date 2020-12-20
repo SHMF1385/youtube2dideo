@@ -1,5 +1,6 @@
 import sys
-
+import argparse
+from webbrowser import open as open_browser
 
 def CheckUrl(url):
     try:
@@ -23,20 +24,19 @@ def CheckUrl(url):
         return False
 
 
-args = sys.argv
-control_args = {'--check': CheckUrl}
+parser = argparse.ArgumentParser(description="converts youtube links into dideo links")
+parser.add_argument("url", help="youtube video url")
+parser.add_argument("--check", dest="check", action="store_const", const=True, default=False)
+parser.add_argument("--open-in-browser", dest="open", action="store_const", const=True, default=False)
+args = parser.parse_args()
 
-if len(args) == 2 or len(args) == 3:
-    video_code = args[1].split('?v=')[1]
+
+def main():
+    control_args = {'--check': CheckUrl}
+    video_code = args.url.split('?v=')[1]
     video_url = "https://www.dideo.ir/v/yt/{}/".format(video_code)
     print(video_url)
+    if args.check: CheckUrl(video_url)
+    if args.open: open_browser(video_url)
 
-    if len(args) > 2:
-        if control_args.get(args[2], False):
-            control_args[args[2]](video_url)
-
-elif len(args) > 3:
-    print("Too much args!")
-
-else:
-    print("Missing args!")
+if __name__ == "__main__": main()
