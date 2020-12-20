@@ -32,11 +32,10 @@ args = parser.parse_args()
 
 
 def main():
-    control_args = {'--check': CheckUrl}
     video_code = args.url.split('?v=')[1]
     video_url = "https://www.dideo.ir/v/yt/{}/".format(video_code)
     print(video_url)
-    if args.check: CheckUrl(video_url)
-    if args.open: open_browser(video_url)
+    if args.check and CheckUrl(video_url) and args.open: 
+        open_browser(video_url)
 
 if __name__ == "__main__": main()
