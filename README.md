@@ -30,5 +30,5 @@ $ python3 -m convert-dideo [video_url] [--options]
 
 ### Options
 
-* --cehck: checks if the link is not broken (by sending a request to the server)
-* --open-in-browser: opens the generated link in your default browser
+* `--cehck` : checks if the link is not broken (by sending a request to the server)
+* `--open-in-browser` : opens the generated link in your default browser
