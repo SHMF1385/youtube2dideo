@@ -11,7 +11,7 @@ This program converts youtube video links to dideo.ir
 install the requirements using this command:  
 
 ```batch
-$ pip install requests
+$ pip install -r requirements.txt
 ```
 
 and then run the setup script:
