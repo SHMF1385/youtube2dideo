@@ -14,10 +14,10 @@ install the requirements using this command:
 $ pip install -r requirements.txt
 ```
 
-and then run the setup script:
+and then run the setup script (run as super user for system install) :
 
 ```batch
-$ python3 setup install 
+$ python3 setup.py install 
 ```
 
 ## Usage
@@ -32,3 +32,8 @@ $ python3 -m convert-dideo [video_url] [--options]
 
 * `--check` : checks if the link is not broken (by sending a request to the server)
 * `--open-in-browser` : opens the generated link in your default browser
+
+### Special thanks to:
+[MSKF](https://github.com/mskf1383)  
+[Amohammadi2](https://github.com/Amohammadi2)  
+For improving the program!  
