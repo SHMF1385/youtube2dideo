@@ -32,6 +32,7 @@ $ python3 -m convert-dideo [video_url] [--options]
 
 * `--check` : checks if the link is not broken (by sending a request to the server)
 * `--open-in-browser` : opens the generated link in your default browser
+* `--download` : downloads the video using youtube-dl
 
 ### Special thanks to:
 [MSKF](https://github.com/mskf1383)  
