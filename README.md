@@ -20,6 +20,10 @@ and then run the setup script (run as super user for system install) :
 $ python3 setup.py install 
 ```
 
+* youtube-dl (optional)
+if installed program can download the video.
+install the program using your os package manager.
+
 ## Usage
 
 you can use this program like this:
