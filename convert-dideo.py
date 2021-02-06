@@ -48,7 +48,7 @@ def main():
         args.url = args.url.split("&list=")[0]
     
     video_code = args.url.split('?v=')[1]
-    video_url = "https://www.dideo.ir/v/yt/{}/".format(video_code)
+    video_url = f"https://www.dideo.ir/v/yt/{video_code}/"
     print(video_url)
     if CheckUrl(video_url) and args.open: 
         open_browser(video_url)
