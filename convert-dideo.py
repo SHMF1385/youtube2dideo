@@ -25,7 +25,6 @@ def CheckUrl(url):
         return False
 
 def DownloadVideo(url):
-    print("Ruuning youtube-dl with given url ...")
     command = ['youtube-dl',url]
     try:
         print("Ruuning youtube-dl with given url ...")
