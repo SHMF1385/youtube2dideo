@@ -21,12 +21,12 @@ $ python3 setup.py install
 ```
 
 * youtube-dl (optional)   
-if installed program can download the video.   
-install the program using your os package manager.   
+If installed program can download the video.   
+Install the program using your OS package manager.   
 
 ## Usage
 
-you can use this program like this:
+You can use this program like this:
 
 ```batch
 $ python3 -m convert-dideo [video_url] [--options]
@@ -42,3 +42,7 @@ $ python3 -m convert-dideo [video_url] [--options]
 [MSKF](https://github.com/mskf1383)  
 [Amohammadi2](https://github.com/Amohammadi2)  
 For improving the program!  
+
+### Highly recommended
+I highly recommend to don't even bother checking the dideo website and just download the video.   
+They're selling the FREE videos to you :|   
