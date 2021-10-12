@@ -6,10 +6,10 @@ from webbrowser import open as open_browser
 def CheckUrl(url):
     try:
         import requests
-        
+
         print("Checking for possible errors ...")
         respons = requests.get(url)
-        
+
         if respons.ok:
             print("No errors")
             return True
@@ -45,11 +45,14 @@ args = parser.parse_args()
 def main():
     if 'list' in args.url:
         args.url = args.url.split("&list=")[0]
-    
-    video_code = args.url.split('?v=')[1]
+
+    if "?v=" in args.url:
+        video_code = args.url.split('?v=')[1]
+    elif "youtu.be" in args.url:
+        vider_cdeo = args.url.split('youtu.be/')[1]
     video_url = f"https://www.dideo.ir/v/yt/{video_code}/"
     print(video_url)
-    if CheckUrl(video_url) and args.open: 
+    if CheckUrl(video_url) and args.open:
         open_browser(video_url)
     if args.download and CheckUrl(video_url):
         DownloadVideo(video_url)
